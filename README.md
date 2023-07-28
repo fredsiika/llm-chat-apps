@@ -41,9 +41,45 @@ OPENAI_API_KEY='xxxxxxxxxx'
 
 ## Run it locally
 
-```sh
-virtualenv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run Chatbot.py
-```
+Before activating a virtual environment (venv), you need to create the virtual environment. Here are the steps you typically follow:
+
+1. Create a new virtual environment:
+   ```bash
+   python3 -m venv {{path/to/venv}}
+   ```
+   
+   This command creates a new virtual environment at the specified path. Replace `{{path/to/venv}}` with the desired location for your virtual environment.
+
+2. Activate the virtual environment:
+
+- For macOS/Linux (bash/zsh):
+    ```bash
+    source {{path/to/venv}}/bin/activate
+    ```
+- For Windows (Command Prompt):
+    ```bash
+    {{path/to/venv}}\Scripts\activate.bat
+    ```
+- For Windows (PowerShell):
+    ```bash
+    {{path/to/venv}}\Scripts\Activate.ps1
+    ```
+Activating the virtual environment modifies the shell's environment variables to use the Python interpreter and packages installed within the virtual environment.
+
+After activating the virtual environment, you can install and use Python packages specific to that environment without interfering with the system-wide Python installation.
+
+Remember to replace `{{path/to/venv}}` with the actual path where you created your virtual environment.
+
+Note: The `python3` command assumes you have Python 3 installed. If you have a different version of Python installed, adjust the command accordingly (e.g., `python2`, `python3.9`, etc.).
+
+3. Install requirements
+
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+4. Run the application
+
+    ```sh
+    streamlit run Chatbot.py
+    ```
