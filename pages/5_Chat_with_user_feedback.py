@@ -9,7 +9,7 @@ with st.sidebar:
     "[View the source code](https://github.com/streamlit/llm-examples/blob/main/pages/5_Chat_with_user_feedback.py)"
     "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
 
-st.title("🔎 Trubrics - Chat with user feedback")
+st.title("🔎 Chat with user feedback")
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
@@ -23,7 +23,7 @@ for msg in st.session_state.messages:
 
 model = "gpt-3.5-turbo"
 
-if prompt := st.chat_input(placeholder="Tell me a joke about sharks"):
+if prompt := st.chat_input(placeholder="Tell me a joke about forex chart patterns"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user").write(prompt)
 
